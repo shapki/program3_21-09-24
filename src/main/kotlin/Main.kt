@@ -24,9 +24,9 @@ fun main() {
     print("Использовать типовую таблицу? (д/н) ")
     val type = readln()
 
-    val table = if (type == "y" || type == "Y" || type == "Д" || type == "д") {
+    val table = if (type == "Д" || type == "д") {
         genDefaultTable()
-    } else if (type == "n" || type == "N" || type == "Н" || type == "н") {
+    } else if (type == "Н" || type == "н") {
         genRandomTable()
     } else {
         println("Неверный ввод!")
@@ -110,15 +110,4 @@ fun decrypt(msg: String, key: String, table: Array<CharArray>): String{
     }
 
     return decryptMsg
-}
-
-fun printTable(table: Array<CharArray>){
-    val alphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ".toCharArray()
-
-    for(i in alphabet.indices){
-        for(j in alphabet.indices){
-            print("$table[i][j]")
-        }
-        println()
-    }
 }
