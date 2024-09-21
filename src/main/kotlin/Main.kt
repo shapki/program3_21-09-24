@@ -22,11 +22,11 @@ fun main() {
     val key = readln()
 
     print("Использовать типовую таблицу? (д/н) ")
-    val typeTable = readln()
+    val type = readln()
 
-    val table = if (typeTable == "y" || typeTable == "Y" || typeTable == "Д" || typeTable == "д") {
+    val table = if (type == "y" || type == "Y" || type == "Д" || type == "д") {
         genDefaultTable()
-    } else if (typeTable == "n" || typeTable == "N" || typeTable == "Н" || typeTable == "н") {
+    } else if (type == "n" || type == "N" || type == "Н" || type == "н") {
         genRandomTable()
     } else {
         println("Неверный ввод!")
